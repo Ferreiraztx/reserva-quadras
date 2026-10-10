@@ -50,12 +50,12 @@ async function forgotPassword(req, res) {
     const resetUrl = `${process.env.FRONTEND_URL}/reset-password?token=${token}`;
 
     await resend.emails.send({
-      from: "Pahragon Beach Tennis <onboarding@resend.dev>",
+      from: "Arena Beach Tennis <onboarding@resend.dev>",
       to: email,
-      subject: "Recuperação de Senha — Pahragon",
+      subject: "Recuperação de Senha — Arena Beach Tennis",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1e2221; background-color: #faf9f6;">
-          <h1 style="font-size: 24px; font-weight: 900; tracking-tight: -0.04em;">Pahragon <span style="font-size: 10px; color: #0d9488;">BEACH TENNIS</span></h1>
+          <h1 style="font-size: 24px; font-weight: 900; tracking-tight: -0.04em;">Arena <span style="font-size: 10px; color: #0d9488;">BEACH TENNIS</span></h1>
           <p style="font-size: 16px; margin-top: 20px;">Olá,</p>
           <p style="font-size: 14px; line-height: 1.6; color: #475569;">Você solicitou a recuperação de senha da sua conta. Para definir uma nova senha de acesso, clique no botão abaixo:</p>
           <div style="margin: 30px 0; text-align: center;">
@@ -293,7 +293,7 @@ async function deleteAccount(req, res) {
       where: { id: idFormatado },
       data: {
         nome: "Usuário Excluído",
-        email: `deleted-${sufixoAleatorio}-${idFormatado}@pahragon.com`,
+        email: `deleted-${sufixoAleatorio}-${idFormatado}@example.invalid`,
         telefone: "00000000000",
         cpf: `del-${sufixoAleatorio}`, 
         senha: senhaInutilizavel, // ✅ Passa a senha criptografada em vez de null

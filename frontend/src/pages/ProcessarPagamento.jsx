@@ -57,7 +57,7 @@ export default function ProcessarPagamento() {
         
         {/* Identidade Visual Discreta */}
         <div className="flex items-center justify-center gap-1.5 opacity-30">
-          <span className="font-black text-sm tracking-tighter text-[#1e2221]">Pahragon</span>
+          <span className="font-black text-sm tracking-tighter text-[#1e2221]">Arena</span>
           <span className="text-[8px] font-extrabold uppercase tracking-widest text-teal-600">Beach Tennis</span>
         </div>
 

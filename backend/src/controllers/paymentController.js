@@ -62,7 +62,7 @@ async function criarPagamento(req, res) {
     const preference = new Preference(client)
 
     // 💡 Ajuste preventivo dos dados do comprador
-    const nomeComprador = booking.user.nome || 'Cliente Pahragon';
+    const nomeComprador = booking.user.nome || 'Cliente da arena';
 
     const result = await preference.create({
       body: {
@@ -128,7 +128,7 @@ async function processarEnvioEmail(booking) {
 
   await enviarEmailConfirmacao(emailDestinatario, {
     nomeAtleta: booking.user?.nome || booking.user?.name || "Atleta",
-    nomeQuadra: booking.court?.nome || "Quadra Pahragon",
+    nomeQuadra: booking.court?.nome || "Quadra da arena",
     data: dataApenasStr,
     horaInicio: horaInic,
     horaFim: horaTerm

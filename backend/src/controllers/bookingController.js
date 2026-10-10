@@ -304,7 +304,7 @@ async function criarManual(req, res) {
 
       await enviarEmailConfirmacao(process.env.RESEND_USER_TEST || "mathxtzferreira@gmail.com", {
         nomeAtleta: booking.nomeAvulso || "Atleta",
-        nomeQuadra: booking.court?.nome || "Quadra Pahragon",
+        nomeQuadra: booking.court?.nome || "Quadra da arena",
         data: dataApenasStr,
         horaInicio: horaInic,
         horaFim: horaTerm
@@ -324,12 +324,12 @@ async function enviarEmailConfirmacao(emailAtleta, dadosReserva) {
 
   try {
     await resend.emails.send({
-      from: "Pahragon Beach Tennis <onboarding@resend.dev>", 
+      from: "Arena Beach Tennis <onboarding@resend.dev>",
       to: emailAtleta, 
-      subject: "Sua quadra está garantida! 🎾 — Pahragon",
+      subject: "Sua quadra está garantida! 🎾 — Arena Beach Tennis",
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1e2221; background-color: #faf9f6;">
-          <h1 style="font-size: 24px; font-weight: 900; tracking-tight: -0.04em;">Pahragon <span style="font-size: 10px; color: #0d9488;">BEACH TENNIS</span></h1>
+          <h1 style="font-size: 24px; font-weight: 900; tracking-tight: -0.04em;">Arena <span style="font-size: 10px; color: #0d9488;">BEACH TENNIS</span></h1>
           
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 24px; margin-top: 25px; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
             <h2 style="font-size: 18px; font-weight: 800; margin-top: 0; color: #0f172a;">Reserva Confirmada, ${nomeAtleta}!</h2>
@@ -469,7 +469,7 @@ async function atualizarManual(req, res) {
 
       await enviarEmailConfirmacao(emailDestinatario, {
         nomeAtleta: reservaAtualizada.nomeAvulso || reservaAtualizada.user?.nome || "Atleta",
-        nomeQuadra: reservaAtualizada.court?.nome || "Quadra Pahragon",
+        nomeQuadra: reservaAtualizada.court?.nome || "Quadra da arena",
         data: dataApenasStr,
         horaInicio: horaInic,
         horaFim: horaTerm

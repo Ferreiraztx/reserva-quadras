@@ -1,4 +1,4 @@
-# 🎾 Pahragon Beach Tennis — Plataforma de Gestão e Agendamento de Quadras
+# 🎾 Arena Beach Tennis — Plataforma de Gestão e Agendamento de Quadras
 
 ![Node.js](https://img.shields.io/badge/Node.js-18+-green?style=for-the-badge&logo=node.js)
 ![React](https://img.shields.io/badge/React-18+-blue?style=for-the-badge&logo=react)
@@ -6,7 +6,7 @@
 ![Prisma](https://img.shields.io/badge/Prisma-ORM-2D3748?style=for-the-badge&logo=prisma)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-3.x-38B2AC?style=for-the-badge&logo=tailwind-css)
 
-A sistema desenvolvido para a **Pahragon Beach Tennis** é uma plataforma Full-Stack web de alto desempenho para agendamento automatizado de quadras de Beach Tennis, gestão de aluguel de equipamentos extras (raquetes) e controle total de caixa/agenda via painel administrativo.
+O sistema desenvolvido para uma empresa de **Beach Tennis** é uma plataforma Full-Stack web de alto desempenho para agendamento automatizado de quadras, gestão de aluguel de equipamentos extras (raquetes) e controle total de caixa/agenda via painel administrativo.
 
 O sistema elimina o gargalo de agendamentos manuais via WhatsApp, contando com checkout direto integrado ao **Mercado Pago**, disparos automáticos de confirmação por e-mail (**Resend**) e conformidade com as exigências da **LGPD**.
 
@@ -54,7 +54,7 @@ O sistema elimina o gargalo de agendamentos manuais via WhatsApp, contando com c
 ## 📦 Estrutura do Projeto
 
 ```text
-pahragon-beach-tennis/
+arena-beach-tennis/
 ├── backend/
 │   ├── src/
 │   │   ├── controllers/   # Regras de negócio (bookings, payments, auth, etc.)
@@ -78,8 +78,8 @@ PostgreSQL ou MySQL (ou SQLite para ambiente de desenvolvimento via Prisma)
 
 1. Clonar o repositório
 Bash
-git clone [https://github.com/seu-usuario/pahragon-beach-tennis.git](https://github.com/seu-usuario/pahragon-beach-tennis.git)
-cd pahragon-beach-tennis
+git clone [https://github.com/seu-usuario/arena-beach-tennis.git](https://github.com/seu-usuario/arena-beach-tennis.git)
+cd arena-beach-tennis
 2. Configurar o Back-end
 Bash
 cd backend
@@ -88,7 +88,7 @@ Crie um arquivo .env na raiz da pasta backend com as variáveis necessárias:
 
 Snippet de código
 PORT=3001
-DATABASE_URL="postgresql://usuario:senha@localhost:5432/pahragon_db"
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/arena_beach_tennis_db"
 JWT_SECRET="sua_chave_secreta_jwt"
 MP_ACCESS_TOKEN="seu_token_mercado_pago"
 RESEND_API_KEY="sua_chave_resend"
@@ -114,7 +114,6 @@ JavaScript
 res.setHeader('Cache-Control', 'no-store, no-cache, must-revalidate, proxy-revalidate');
 
 ## 📄 Licença e Propriedade
-Este software é de propriedade exclusiva e confidencial da Pahragon Beach Tennis. 
-Todos os direitos reservados.
+Este software é uma base genérica para empresas de Beach Tennis e deve ser configurado conforme a identidade da operação.
 
 Developed by Matheus Ferreira

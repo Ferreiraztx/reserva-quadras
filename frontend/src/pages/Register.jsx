@@ -115,7 +115,7 @@ export default function Register() {
         <div className="text-center mb-10">
           <Link to="/" className="inline-flex items-baseline gap-2 mb-4">
             <span className="font-black text-4xl tracking-tighter text-[#1e2221]">
-              Pahragon
+              Arena
             </span>
             <span className="text-xs font-extrabold uppercase tracking-widest text-teal-600">
               Beach Tennis
@@ -125,7 +125,7 @@ export default function Register() {
             Criar sua conta
           </h1>
           <p className="text-slate-500 text-sm mt-1">
-            Junte-se à nossa comunidade no Santa Quitéria.
+            Junte-se à nossa comunidade de beach tennis.
           </p>
         </div>
 

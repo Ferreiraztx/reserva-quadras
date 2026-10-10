@@ -5,7 +5,7 @@ export default function Contato() {
     {
       icon: "📍",
       title: "Endereço",
-      info: "R. João Alencar Guimarães, 574\nSta. Quitéria — Curitiba, PR",
+      info: "Atendimento online e presencial\nConsulte a unidade mais próxima",
     },
     {
       icon: "🕐",
@@ -15,9 +15,8 @@ export default function Contato() {
   ];
 
   const whatsappUrl = "https://wa.me/5541999999999";
-  const instagramUrl = "https://instagram.com/pahragon";
-  const mapaUrl =
-    "https://maps.google.com/maps?q=Rua+Joao+Alencar+Guimaraes+574+Curitiba&output=embed";
+  const instagramUrl = "https://instagram.com";
+  const mapaUrl = "https://maps.google.com";
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#f7f5f1] text-[#2d3130] antialiased font-sans">
@@ -139,7 +138,7 @@ export default function Contato() {
                 </div>
 
                 <a
-                  href="https://maps.google.com/?q=Rua+Joao+Alencar+Guimaraes+574+Curitiba"
+                  href="https://maps.google.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-xs font-bold text-teal-700 transition hover:text-teal-900"

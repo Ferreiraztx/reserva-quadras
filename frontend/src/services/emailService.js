@@ -49,7 +49,7 @@ async function enviarConfirmacaoReserva(booking) {
     <body>
       <div class="container">
         <div class="header">
-          <h1>🎾 PAHRAGON</h1>
+          <h1>🎾 ARENA</h1>
           <p>Beach Tennis</p>
         </div>
 
@@ -92,14 +92,14 @@ async function enviarConfirmacaoReserva(booking) {
           <hr class="divider">
 
           <p style="color: #64748b; font-size: 14px; text-align: center;">
-            📍 R. João Alencar Guimarães, 574 — Sta. Quitéria, Curitiba<br>
+            📍 Consulte o endereço da unidade escolhida<br>
             Qualquer dúvida, entre em contato pelo WhatsApp.
           </p>
         </div>
 
         <div class="footer">
-          <p>Pahragon Beach Tennis — Curitiba, PR</p>
-          <p><a href="https://instagram.com/pahragon">@pahragon</a></p>
+          <p>Arena Beach Tennis</p>
+          <p><a href="https://instagram.com">@beachtennis</a></p>
         </div>
       </div>
     </body>
@@ -107,9 +107,9 @@ async function enviarConfirmacaoReserva(booking) {
   `
 
   await transporter.sendMail({
-    from: `"Pahragon Beach Tennis" <${process.env.EMAIL_USER}>`,
+    from: `"Arena Beach Tennis" <${process.env.EMAIL_USER}>`,
     to: user.email,
-    subject: '✅ Reserva confirmada — Pahragon Beach Tennis',
+    subject: '✅ Reserva confirmada — Arena Beach Tennis',
     html
   })
 }

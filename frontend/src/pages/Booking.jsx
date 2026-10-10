@@ -318,7 +318,7 @@ export default function Booking() {
           Agendar Quadra
         </h1>
         <p className="text-[10px] font-extrabold uppercase tracking-widest text-teal-600 mt-1">
-          Pahragon Arena
+          Arena Beach Tennis
         </p>
       </header>
 

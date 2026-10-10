@@ -55,7 +55,7 @@ app.use('/tournaments', tournamentRoutes);
 app.use('/horarios', require('./routes/horarios'));
 
 app.get('/', (req, res) => {
-  res.json({ message: 'Pahragon Beach Tennis API 🎾' });
+  res.json({ message: 'Arena Beach Tennis API 🎾' });
 });
 
 module.exports = app;

@@ -153,7 +153,7 @@ export default function MinhasReservas() {
               Minhas Reservas
             </h1>
             <span className="text-[9px] font-extrabold uppercase tracking-widest text-teal-600 block mt-1">
-              Pahragon Beach Tennis
+              Arena Beach Tennis
             </span>
           </div>
         </div>
