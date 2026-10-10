@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 144" role="img" aria-labelledby="title desc">
+  <title id="title">Arena Beach Tennis</title>
+  <desc id="desc">Logo da Arena Beach Tennis com sol, bola e rede.</desc>
+  <defs>
+    <linearGradient id="sand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6c667"/>
+      <stop offset="1" stop-color="#e99a3d"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#19b7a5"/>
+      <stop offset="1" stop-color="#087f78"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10 10)">
+    <rect width="124" height="124" rx="38" fill="#102b2a"/>
+    <circle cx="62" cy="55" r="27" fill="url(#sand)"/>
+    <path d="M29 86c20-12 46-12 66 0" fill="none" stroke="#f8faf7" stroke-linecap="round" stroke-width="4"/>
+    <path d="M29 86v25M95 86v25M29 96c22-5 44-5 66 0M29 105c22-5 44-5 66 0" fill="none" stroke="#a8d9d1" stroke-linecap="round" stroke-width="2.5"/>
+    <path d="M38 27v-8M62 22V12M86 27l5-7M24 43l-8-4M100 43l8-4" fill="none" stroke="#f6c667" stroke-linecap="round" stroke-width="4"/>
+    <path d="M49 49c5-7 15-10 24-7 6 2 10 7 12 13" fill="none" stroke="#fff7df" stroke-linecap="round" stroke-width="3"/>
+    <path d="M79 46c-4 7-6 14-5 22" fill="none" stroke="#fff7df" stroke-linecap="round" stroke-width="3"/>
+  </g>
+
+  <g fill="#102b2a">
+    <text x="158" y="72" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="800" letter-spacing="-2">ARENA</text>
+    <text x="161" y="108" fill="#0b8d83" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="6">BEACH TENNIS</text>
+  </g>
+</svg>

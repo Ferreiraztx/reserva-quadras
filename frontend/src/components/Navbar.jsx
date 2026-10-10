@@ -12,9 +12,12 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         
         {/* Identidade Visual Idêntica ao Cabeçalho do Admin */}
-        <Link to="/" className="flex items-baseline gap-2" onClick={() => setMenu(false)}>
-          <span className="font-black text-2xl tracking-tighter text-[#1e2221]">Arena</span>
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-teal-600">Beach Tennis</span>
+        <Link to="/" className="flex items-center" onClick={() => setMenu(false)}>
+          <img
+            src="/logo-arena-beach-tennis.svg"
+            alt="Arena Beach Tennis"
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* Desktop Menu (Estilo Admin Minimalista) */}
