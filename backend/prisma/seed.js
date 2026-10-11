@@ -3,34 +3,22 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
-  // Ajuste os nomes dos campos/modelo conforme seu schema.prisma
-  const diasSemana = [
-    'Segunda-feira',
-    'Terça-feira',
-    'Quarta-feira',
-    'Quinta-feira',
-    'Sexta-feira',
-    'Sábado',
-    'Domingo'
-  ];
+  const dias = [0, 1, 2, 3, 4, 5, 6]; // 0 = Domingo, 6 = Sábado
 
-  for (const dia of diasSemana) {
-    // Exemplo básico: ajuste de acordo com o seu modelo Prisma de Horário/Funcionamento
-    /*
-    await prisma.businessHour.upsert({
-      where: { day: dia },
+  for (const dia of dias) {
+    await prisma.horarioFuncionamento.upsert({
+      where: { diaSemana: dia },
       update: {},
       create: {
-        day: dia,
-        openTime: '08:00',
-        closeTime: '22:00',
-        active: true,
+        diaSemana: dia,
+        ativo: true,
+        horaAbertura: "08:00",
+        horaFechamento: "23:00",
       },
     });
-    */
   }
 
-  console.log('Seed executado com sucesso!');
+  console.log('Horários de funcionamento inicializados com sucesso!');
 }
 
 main()
