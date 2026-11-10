@@ -1,29 +1,43 @@
-// prisma/seed.js
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
 async function main() {
-  const dias = [0, 1, 2, 3, 4, 5, 6]; // 0 = Domingo, 6 = Sábado
+  console.log('🌱 Populando horários de funcionamento...');
 
-  for (const dia of dias) {
+  // 0 = Domingo, 1 = Segunda-feira, ..., 6 = Sábado
+  const horaiosPadrao = [
+    { diaSemana: 0, ativo: true, horaAbertura: '08:00', horaFechamento: '22:00' }, // Domingo
+    { diaSemana: 1, ativo: true, horaAbertura: '08:00', horaFechamento: '23:00' }, // Segunda
+    { diaSemana: 2, ativo: true, horaAbertura: '08:00', horaFechamento: '23:00' }, // Terça
+    { diaSemana: 3, ativo: true, horaAbertura: '08:00', horaFechamento: '23:00' }, // Quarta
+    { diaSemana: 4, ativo: true, horaAbertura: '08:00', horaFechamento: '23:00' }, // Quinta
+    { diaSemana: 5, ativo: true, horaAbertura: '08:00', horaFechamento: '23:00' }, // Sexta
+    { diaSemana: 6, ativo: true, horaAbertura: '08:00', horaFechamento: '22:00' }, // Sábado
+  ];
+
+  for (const h of horaiosPadrao) {
     await prisma.horarioFuncionamento.upsert({
-      where: { diaSemana: dia },
-      update: {},
+      where: { diaSemana: h.diaSemana }, // Usa o diaSemana que é @unique no teu schema
+      update: {
+        ativo: h.ativo,
+        horaAbertura: h.horaAbertura,
+        horaFechamento: h.horaFechamento,
+      },
       create: {
-        diaSemana: dia,
-        ativo: true,
-        horaAbertura: "08:00",
-        horaFechamento: "23:00",
+        diaSemana: h.diaSemana,
+        ativo: h.ativo,
+        horaAbertura: h.horaAbertura,
+        horaFechamento: h.horaFechamento,
       },
     });
   }
 
-  console.log('Horários de funcionamento inicializados com sucesso!');
+  console.log('✅ Horários de funcionamento registados com sucesso!');
 }
 
 main()
   .catch((e) => {
-    console.error(e);
+    console.error('❌ Erro ao executar seed:', e);
     process.exit(1);
   })
   .finally(async () => {
